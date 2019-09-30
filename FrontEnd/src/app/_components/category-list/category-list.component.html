@@ -1,0 +1,29 @@
+<!-- <h2>Categories</h2>   -->
+<div *ngIf="loadCat; else load">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <div (click)="onSelectNoCategory()" class="category-name" >
+                <ng-container *ngIf = "currentCategory === 'None' ; else noActive">
+                    <div class="active">None</div>
+                </ng-container>
+                <ng-template #noActive>
+                    <div>None</div>
+                </ng-template>
+            </div>
+        </li>
+        <li *ngFor="let category of categories" class="list-group-item">
+            <div (click)="onSelectCategory(category)" class="category-name" >
+                <ng-container *ngIf = "currentCategory === category.name ; else noActive">
+                    <div class="active">{{category.name}}</div>
+                </ng-container>
+                <ng-template #noActive>
+                    <div>{{category.name}}</div>
+                </ng-template>
+            </div>
+        </li>
+    </ul> 
+</div>
+
+<ng-template #load>
+    Loading Category List...
+</ng-template>

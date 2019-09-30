@@ -1,0 +1,10 @@
+.dialog-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.dialog-content {
+    text-align: -webkit-center;
+}

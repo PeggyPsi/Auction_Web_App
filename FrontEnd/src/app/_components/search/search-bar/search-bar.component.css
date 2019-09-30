@@ -1,0 +1,27 @@
+.search {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 10px;
+}
+
+.form-control.bar {
+    float: right;
+    margin: 0;
+    /* display: inline-block;  */
+    border-color: rgba(248, 230, 127, 0.8);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(245, 210, 97, 0.6);
+    outline: 0 none;
+}
+
+.search-btn{
+    float: left;
+    width: 20%;
+    padding: 5px;
+    background: rgb(247, 183, 44);
+    color: white;
+    font-size: 17px;
+    border: 1px solid rgb(228, 218, 218);
+    border-radius: 5%;
+    /* border-left: none; Prevent double borders */
+    cursor: pointer;
+}

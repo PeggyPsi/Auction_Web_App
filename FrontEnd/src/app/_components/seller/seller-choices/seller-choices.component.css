@@ -1,0 +1,42 @@
+h2 {
+	color: #000;
+	font-size: 26px;
+	font-weight: 300;
+	text-align: center;
+	text-transform: uppercase;
+	position: relative;
+	margin: 30px 0 80px;
+}
+
+h2::after {
+	content: "";
+	width: 100px;
+	position: absolute;
+	margin: 0 auto;
+	height: 4px;
+	background: rgba(0, 0, 0, 0.2);
+	left: 0;
+	right: 0;
+	bottom: -20px;
+}
+
+.choice-name {
+	font-size: 16px;
+	color: #676a6c;
+	display: block;
+	margin: 2px 0 5px 0;
+	cursor: pointer;
+}
+
+.choice-name:hover,
+.choice-name:focus {
+	color: #673b72;
+}
+
+.list-group-item {
+	position: relative;
+    display: block;
+    padding: 0.1rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: #fff;
+}

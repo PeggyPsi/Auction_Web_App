@@ -1,0 +1,22 @@
+<ul class="list-group list-group-flush">
+    <li class="list-group-item">
+        <div (click)="onSelectNoPriceRange()" class="price-name" >
+            <ng-container *ngIf = "currentPriceRange === 'None' ; else noActive">
+                <div class="active">None</div>
+            </ng-container>
+            <ng-template #noActive>
+                <div>None</div>
+            </ng-template>
+        </div>
+    </li>
+    <li *ngFor="let price of priceRanges" class="list-group-item">
+        <div (click)="onSelectPriceRange(price)" class="price-name" >
+            <ng-container *ngIf = "currentPriceRange === price.name ; else noActive">
+                <div class="active">{{price.name}}</div>
+            </ng-container>
+            <ng-template #noActive>
+                <div>{{price.name}}</div>
+            </ng-template>
+        </div>
+    </li>
+</ul>

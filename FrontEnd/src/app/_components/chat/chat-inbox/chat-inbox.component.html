@@ -1,0 +1,99 @@
+<!-- 
+<div class="inbox-head">
+    <h3>Inbox</h3>
+</div>
+<div class="inbox-body">
+    <table class="table table-inbox table-hover">
+        <tbody>
+        <tr class="unread">
+            <td class="inbox-small-cells">
+                <button class="expand btn btn-default" type="button"></button>
+            </td>
+            <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+            <td class="view-message  dont-show">PHPClass</td>
+            <td class="view-message ">Added a new class: Login Class Fast Site</td>
+            <td class="view-message  inbox-small-cells"><i class="fa fa-paperclip"></i></td>
+            <td class="view-message  text-right">9:27 AM</td>
+        </tr>
+        <tr class="">
+            <td class="inbox-small-cells">
+                <input type="checkbox" class="mail-checkbox">
+            </td>
+            <td class="inbox-small-cells"><i class="fa fa-star"></i></td>
+            <td class="view-message dont-show">JW Player</td>
+            <td class="view-message">Last Chance: Upgrade to Pro for </td>
+            <td class="view-message inbox-small-cells"></td>
+            <td><button class="btn"><i class="fa fa-trash"></i></button></td>
+            <td class="view-message text-right">March 15</td>
+        </tr>
+    </tbody>
+    </table>
+</div> -->
+
+<div class="inbox-head">
+    <h3>Inbox</h3>
+</div>
+<div *ngIf="loadedMessages; else load">
+    <div *ngIf="inboxMessages">
+        <div class="inbox-body">
+            <div class="message-preview col-md-12"> 
+                <div id="accordion">
+                    <div class="card" *ngFor="let message of inboxMessages; let i=index">
+                        <!--Message preview info-->
+                        <div class="card-header" id="headingOne" *ngIf="!message.deletedTo">
+                            <!-- Expand button  -->
+                            <!-- <h5 class="mb-0">
+                                <button class="btn btn-default collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    v
+                                </button>
+                                From (seller)
+                            </h5> -->
+                            <table class="table table-inbox table-hover">
+                                <tbody>
+                                    <ng-container *ngIf="message.seen; then seen ; else notSeen"></ng-container>
+                                    <ng-template #seen>
+                                        <tr class="">
+                                            <td class="inbox-small-cells">
+                                                <button class=" expand btn btn-default" data-toggle="collapse" [attr.data-target]="'#collapse'+i" aria-expanded="true" aria-controls="collapseOne" (click)="messageSeen(message, i)">v</button>
+                                            </td>
+                                            <td class="text-left sender">{{message.fromUser.username}} ({{message.fromRole}})</td>
+                                            <td class="text-left message">{{message.message}}</td>
+                                            <td class="text-right date">{{message.dateTime.split('T')[0]}} {{message.dateTime.split('T')[1].substr(0,5)}}</td>
+                                        </tr>
+                                    </ng-template>
+                                    <ng-template #notSeen>
+                                        <tr class="unread">
+                                            <td class="inbox-small-cells">
+                                                <button class=" expand btn btn-default" data-toggle="collapse" [attr.data-target]="'#collapse'+i" aria-expanded="true" aria-controls="collapseOne" (click)="messageSeen(message, i)">v</button>
+                                            </td>
+                                            <td class="text-left sender">{{message.fromUser.username}} ({{message.fromRole}})</td>
+                                            <td class="text-left message">{{message.message}}</td>
+                                            <td class="text-right date">{{message.dateTime.split('T')[0]}} {{message.dateTime.split('T')[1].substr(0,5)}}</td>
+                                        </tr>
+                                    </ng-template>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--Collapsible for message-->
+                        <div id="collapse{{i}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordion" *ngIf="!message.deletedTo">
+                            <div class="card-body">
+                                <div class="message-comm-info col-md-12"><h4>From: </h4>{{message.fromUser.username}} ({{message.fromRole}})</div>
+                                <div class="message-content col-md-12"><h4>Message: </h4>{{message.message}}</div>
+                                <div class="message-choices col-md-12"> 
+                                    <button class="btn btn-default reply active" (click)="sendMessage(message.fromUser, message.fromRole)">Reply</button>
+                                    <button class="btn btn-default delete" (click)="deleteMessage(message, i)">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!--accordion-->
+            </div>            
+        </div>
+    </div>
+</div>
+
+<alert></alert>
+
+<ng-template #load>
+    Loading Messages...
+</ng-template>

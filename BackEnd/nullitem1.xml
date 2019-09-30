@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Item ItemID="1">
+    <Name>queen</Name>
+    <Category>Dancing</Category>
+    <Category>Icon</Category>
+    <Category>Music</Category>
+    <Currently>$30.0</Currently>
+    <First_Bid>$23.0</First_Bid>
+    <Number_of_Bids>2</Number_of_Bids>
+    <Bids>
+        <Bid>
+            <Bidder Rating="0" UserID="kostas">
+                <Country>Greece</Country>
+                <Location>Athens, Home</Location>
+            </Bidder>
+            <Time>2019-09-10 12:20:38</Time>
+            <Amount>$30.0</Amount>
+        </Bid>
+        <Bid>
+            <Bidder Rating="0" UserID="kostas">
+                <Country>Greece</Country>
+                <Location>Athens, Home</Location>
+            </Bidder>
+            <Time>2019-09-10 12:05:37</Time>
+            <Amount>$24.0</Amount>
+        </Bid>
+    </Bids>
+    <Location Latitude="22.213984" Longitude="-57.346397">Athens, Pagrati</Location>
+    <Country>Greece</Country>
+    <Started>2019-03-06 10:48:00</Started>
+    <Ends>2019-09-06 11:48:00</Ends>
+    <Seller Rating="0" UserID="peggy"/>
+    <Description>the best band in the world is queen and now is the time for you to win this amazing price</Description>
+</Item>

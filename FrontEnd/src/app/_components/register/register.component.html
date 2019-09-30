@@ -1,0 +1,155 @@
+﻿<!-- https://colorlib.com/etc/regform/colorlib-regform-5/ -->
+
+<div class="page-wrapper bg-gra-01 p-t-45 p-b-50">
+    <div class="wrapper wrapper--w790">
+        <div class="card card-5">
+            <div class="card-heading">
+                <h2 class="title">Registration Form</h2>
+            </div>
+            <div class="card-body">
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                    <label class="header">Personal Info</label>
+                    <!-- First name and last name-->
+                    <div class="form-row m-b-55">
+                        <!-- <div class="name">Name</div> -->
+                        <div class="value">
+                            <div class="row row-space">
+                                <div class="col-3.6">
+                                    <div class="input-group-desc">
+                                        <label for="username" class="label--desc">Username</label>
+                                        <input type="text" formControlName="username" class="input--style-5" />
+                                        <div *ngIf="f.username.invalid && (f.username.dirty || f.username.touched) || submitted" class="text-danger">
+                                            <div *ngIf="f.username.errors?.required" >Username is required</div>
+                                            <div *ngIf="f.username.hasError('uniqueUsername')">Username exists</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3.6">
+                                    <div class="input-group-desc">
+                                        <label for="fname" class="label--desc">First Name</label>
+                                        <input type="text" formControlName="fname" class="input--style-5" />
+                                        <div *ngIf="f.fname.invalid && (f.fname.dirty || f.fname.touched) || submitted " class="text-danger">
+                                            <div *ngIf="f.fname.errors?.required" >First Name is required</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-3.6">
+                                    <div class="input-group-desc">
+                                        <label for="lname" class="label--desc">Last Name</label>
+                                        <input type="text" formControlName="lname" class="input--style-5" />
+                                        <div *ngIf="f.lname.invalid && (f.lname.dirty || f.lname.touched) || submitted" class="text-danger">
+                                            <div *ngIf="f.lname.errors?.required">Last Name is required</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Password and password confirmation-->
+                    <div class="form-row">
+                        <div class="value">
+                            <div class="row row-space">
+                                <div class="col-5">
+                                    <!--Password-->
+                                    <div class="input-group-desc">
+                                        <label for="password" class="label--desc">Password</label>
+                                        <input type="password" formControlName="password" class="input--style-5" />
+                                        <div div *ngIf="f.password.invalid && (f.password.dirty || f.password.touched) || submitted" class="text-danger">
+                                            <div *ngIf="f.password.errors?.required">Password is required</div>
+                                            <div *ngIf="f.password.hasError('hasNumber')">Must contain at least 1 number!</div>
+                                            <div *ngIf="f.password.hasError('hasCapitalCase')" >Must contain at least 1 in Capital Case!</div>
+                                            <div *ngIf="f.password.hasError('hasSmallCase')" >Must contain at least 1 Letter in Small Case!</div>
+                                            <div *ngIf="f.password.hasError('hasSpecialCharacters')" >Must contain at least 1 Special Character!</div>
+                                            <div *ngIf="f.password.hasError('minlength')" >Must be at least 8 characters long!</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <!--Password Confirmation-->
+                                    <div class="input-group-desc">
+                                        <label for="pwConfirm" class="label--desc">Password Confirmation</label>
+                                        <input type="password" formControlName="pwConfirm" class="input--style-5" />
+                                        <div *ngIf="f.pwConfirm.invalid && (f.pwConfirm.dirty || f.pwConfirm.touched) || submitted" class="text-danger">
+                                            <div *ngIf="f.pwConfirm.errors?.required">Password confirmation is required</div>
+                                            <div *ngIf="f.pwConfirm.hasError('NoPassswordMatch')"> Passwords do not match!</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Email and phone-->
+                    <div class="form-row">
+                        <div class="value">
+                            <div class="row row-space">
+                                <div class="col-4">
+                                    <!--Email-->
+                                    <label for="email" class="label--desc">Email</label>
+                                    <input type="email" formControlName="email" class="input--style-5" />
+                                    <div *ngIf="f.email.invalid && (f.email.dirty || f.email.touched) || submitted" class="text-danger">
+                                        <div *ngIf="f.email.errors?.required">Email is required</div>
+                                        <div *ngIf="f.email.errors?.email"> Email is not accepted</div>
+                                    </div>
+                                </div>
+                                <div class="col-3.2">
+                                    <!--Phone-->
+                                    <div class="input-group-desc">
+                                        <label for="phone" class="label--desc">Phone number</label>
+                                        <input type="number" formControlName="phone" class="input--style-5"/>
+                                        <div *ngIf="f.phone.invalid && (f.phone.dirty || f.phone.touched) || submitted" class="text-danger">
+                                            <div *ngIf="f.phone.errors?.required">Phone number is required</div>
+                                            <div *ngIf="f.phone.hasError('min') || f.phone.hasError('max')"> Phone number is not valid</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-2">
+                                    <!--AFM-->
+                                    <div class="input-group-desc">
+                                        <label for="afm" class="label--desc">AFM number</label>
+                                        <input type="text" formControlName="afm" class="input--style-5"/>
+                                        <div *ngIf="f.afm.invalid && (f.afm.dirty || f.afm.touched) || submitted" class="text-danger">
+                                            <div *ngIf="f.afm.errors?.required">AFM is required</div>
+                                            <div *ngIf="f.afm.hasError('numeric')"> Only numbers</div>
+                                            <div *ngIf="f.afm.hasError('fixedLength')"> 11 characters </div>
+                                            <div *ngIf="f.afm.hasError('afmPattern')"> e.g. 07119701248</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row m-b-55" formGroupName="location">
+                        <label class="header">Location Info</label>
+                        <div class="value">
+                            <div class="row row-space">
+                                <div class="col-5">
+                                    <!-- Location -->
+                                    <div class="input-group-desc">
+                                        <label for="location" class="label--desc">Location</label>
+                                        <input type="text" formControlName="location"  class="input--style-5"/>
+                                        <div *ngIf="floc.get('location').invalid && (floc.get('location').dirty || floc.get('location').touched) || submitted" class="text-danger">
+                                            <div *ngIf="floc.get('location').errors?.required">Location is required</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <!-- Country -->
+                                    <div class="input-group-desc">
+                                        <label for="country" class="label--desc">Country</label>
+                                        <input type="text" formControlName="country" class="input--style-5"/>
+                                        <div *ngIf="floc.get('country').invalid && (floc.get('country').dirty || floc.get('country').touched) || submitted" class="text-danger"> 
+                                            <div *ngIf="floc.get('country').errors?.required">Country is required</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="register-button">
+                        <button class="btn btn--radius-2 btn--red" type="submit">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

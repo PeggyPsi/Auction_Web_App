@@ -1,0 +1,73 @@
+
+<!-- Location Info -->
+<!-- <div formGroupName="location">
+    <div class="form-group">
+        <label for="location">Location*</label>
+        <input type="text" formControlName="location"/>
+        <div *ngIf="floc.get('location').invalid && (floc.get('location').dirty || floc.get('location').touched) || submitted">
+            <div *ngIf="floc.get('location').errors?.required">Location is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="country">Country*</label>
+        <input type="text" formControlName="country"  />
+        <div *ngIf="floc.get('country').invalid && (floc.get('country').dirty || floc.get('country').touched) || submitted"> 
+            <div *ngIf="floc.get('country').errors?.required">Country is required</div>
+        </div>
+    </div>
+</div> -->
+
+<hr class="line p-b-20">
+<label class="header">Location Info</label>
+<div class="form-row m-b-55" formGroupName="location">
+    <div class="value">
+        <div class="row row-space">
+            <div class="col-5">
+                <!-- Location -->
+                <div class="input-group-desc">
+                    <label for="location" class="label--desc">Location</label>
+                    <input type="text" formControlName="location"  class="input--style-5"/>
+                    <div *ngIf="floc.get('location').invalid && (floc.get('location').dirty || floc.get('location').touched) || submitted" class="text-danger">
+                        <div *ngIf="floc.get('location').errors?.required">Location is required</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5">
+                <!-- Country -->
+                <div class="input-group-desc">
+                    <label for="country" class="label--desc">Country</label>
+                    <input type="text" formControlName="country" class="input--style-5"/>
+                    <div *ngIf="floc.get('country').invalid && (floc.get('country').dirty || floc.get('country').touched) || submitted" class="text-danger"> 
+                        <div *ngIf="floc.get('country').errors?.required">Country is required</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" *ngIf="item">
+                <input input="number" value="{{item.location.id}}" formControlName="id"  hidden />
+            </div> 
+        </div>
+    </div>
+</div>
+
+<div class="form-row m-b-55">
+    <div class="value">
+        <div class="row row-space">
+            <div class="col-10">
+                <!-- Map -->
+                <div class="input-group-desc">
+                    <div class="coordinates" >
+                        <button (click)="cancelCoordinates()" class="btn btn-sm btn--radius-2 btn--green" type="button"> Cancel Coordinates </button> {{message}}
+                    </div>
+                    <div class="container">
+                        <div id="map" class="map"></div>
+                        <div id="popup" class="ol-popup">
+                            <div id="popup-content">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

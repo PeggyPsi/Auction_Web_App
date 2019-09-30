@@ -1,0 +1,54 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- <div class="container"> -->
+
+        <!--Auction App logo-->
+        <div class="navbar-header">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <button type="button" class="navbar-toggler collapsed" data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1" aria-expanded="false"> <span class="sr-only">Toggle navigation</span>
+            &#x2630;</button> 
+            <a class="navbar-brand" routerLink="{{currentHome}}">AuctionShop</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active nav-item"><a routerLink="{{currentHome}}" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item"><a [routerLink]="['/browse', 'all']" class="nav-link">Browse Items</a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav ml-auto">
+                <!-- Search bar -->
+                <app-search-bar></app-search-bar>
+                <li class="nav-link" *ngIf="currentUser"> <b>Hi, {{currentUser.username}}</b></li>
+                <!-- If visitor or simple user (not admin) -->
+                <li *ngIf="!currentUser || currentUser &amp;&amp; currentUser.username != &apos;admin&apos;"
+                class="nav-item"> <a (click)="sellItem()" class="nav-link">Sell</a>
+                </li>
+                <ng-container *ngIf="currentUser ; then loggedIn ; else notLoggedIn"></ng-container>
+                <ng-template #loggedIn>
+                    <li><a routerLink="/user/chat"  class="nav-link">
+                            <span>Messages</span>
+                            <span *ngIf="numNewMessages!=0" class="notification">{{numNewMessages}}</span>
+                        </a>
+                    </li>
+                    <!-- <li *ngIf="numNewMessages!=0">{{numNewMessages}}</li> -->
+                    <li><a (click)="logout()"  class="nav-link">Logout</a></li>
+                    <!-- TODO add profile -->
+                </ng-template>
+                <ng-template #notLoggedIn>
+                    <li><a routerLink="/register" class="nav-link">Sign Up</a>
+                    </li>
+                    <li><a routerLink="/login" class="nav-link">Login</a>
+                    <!-- <li><a class="nav-link" (click)="login=true"></a> -->
+                    </li>
+                </ng-template>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    <!-- </div> -->
+    <!-- /.container-fluid -->
+</nav>

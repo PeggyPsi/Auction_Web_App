@@ -1,0 +1,100 @@
+<p>seller-item-edit works!</p>
+<form *ngIf="loadedItem; else load" [formGroup]="itemForm" (ngSubmit)="onSubmit()">
+    <!-- Name -->
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" formControlName="name" >
+        <div *ngIf="f.name.invalid && (f.name.dirty || f.name.touched) || submitted ">
+            <div *ngIf="f.name.errors?.required" >Name is required</div>
+        </div>
+    </div>
+    <!-- Description -->
+    <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" formControlName="description" >
+        <!-- <textarea formControlname="description"  maxlength="100" required></textarea> -->
+        <div *ngIf="f.description.invalid && (f.description.dirty || f.description.touched) || submitted ">
+            <div *ngIf="f.description.errors?.required" >Description is required</div>
+        </div>
+    </div>
+    <!-- Category -->
+    <div class="form-group">
+        <label for="categories">Category (seperate with comma)</label>
+        <tag-input formControlName="categories" 
+        placeholder = "+ Category" 
+        secondaryPlaceholder = "Add new category" clearOnBlur = "true" separatorKeys="[',']"
+        onlyFromAutocomplete = "true">
+            <tag-input-dropdown [autocompleteItems]="categoriesArray">
+            </tag-input-dropdown>
+        </tag-input>
+        <!-- <input type="text" data-role="tagsinput" /> -->
+        <div *ngIf="f.categories.invalid && (f.categories.dirty || f.categories.touched) || submitted ">
+            <div *ngIf="f.categories.errors?.required" >At least one category is required</div>
+        </div>
+    </div>
+    <!-- First bid -->
+    <div class="form-group">
+        <label for="firstBid">Initial Bid</label>
+        <input type="number" formControlName = "firstBid" value="10.00" min="0" step="0.01" data-number-to-fixed="2" data-number-stepfactor="100" />
+        <div *ngIf="f.firstBid.invalid && (f.firstBid.dirty || f.firstBid.touched) || submitted ">
+            <div *ngIf="f.firstBid.errors?.required" >Initial bid is required</div>
+        </div>
+    </div>
+
+    <!-- Auction Start -->
+    <div class="form-group">
+        <label for="auctionStart">Auction Start</label>
+        <input type="datetime-local" formControlName="auctionStart"  >
+        <div *ngIf="f.auctionStart.invalid && (f.auctionStart.dirty || f.auctionStart.touched) || submitted ">
+            <div *ngIf="f.auctionStart.errors?.required" >Auction start date is required</div>
+            <!-- <div *ngIf="f.auctionStart.hasError('DatesValid')"> Start date must be before end date!</div> -->
+        </div>
+    </div>
+
+    <!-- Auction end -->
+    <div class="form-group">
+        <label for="auctionEnd">Auction End</label>
+        <input type="datetime-local" formControlName="auctionEnd" >
+        <div *ngIf="f.auctionEnd.invalid && (f.auctionEnd.dirty || f.auctionEnd.touched) || submitted || f.auctionStart.invalid || (f.auctionStart.dirty || f.auctionStart.touched)">
+            <div *ngIf="f.auctionEnd.errors?.required" >Auction end date is required</div>
+            <div *ngIf="f.auctionEnd.hasError('DatesValid')"> End date must be after start date!</div>
+        </div>
+    </div>
+    
+    <app-map-item-create [item]="item"></app-map-item-create>
+    
+    <div *ngFor='let image of item.images'>
+        <img src="data:image/jpeg;base64,{{image.content}}" height="100">
+        <button type="button" (click)="removeImageExists(image.id)" >Remove</button>
+    </div>
+    
+    <div *ngFor='let image of html_images ; let i=index'>
+        <img [src]="image.url" height="100">
+        <ng-container *ngIf="image.large === true ; then large ; else notLarge"></ng-container>
+        <ng-template #large>
+            Picture will not be uploaded. Exceeds file size.
+        </ng-template>
+        <ng-template #notLarge>
+            <button type="button" (click)="removeImage(i, image.image_ref)" >Remove</button>
+        </ng-template>
+    </div>
+    <label></label>
+    <label>Images (max 1Mb each)</label>
+    <input type='file' id="images" (change)="onSelectFile($event)" multiple>               
+    
+
+    <div class="form-group">
+        <input input="number" value="{{item.id}}" formControlName="id"  hidden />
+    </div> 
+
+    <br>
+    <div class="form-group">
+        <button [disabled]="loading" class="btn btn-primary">Edit</button>
+        <img *ngIf="loading" class="pl-3" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+        <a [routerLink]="['/user/seller/items/id', item.id]" class="btn btn-link">Cancel</a>
+    </div>
+</form>
+
+<ng-template #load>
+    Loading Item Update...
+</ng-template>

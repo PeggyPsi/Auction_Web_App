@@ -1,0 +1,56 @@
+<h2>YOU AUCTIONS</h2>
+<div *ngIf="loadedItems && items; else load">
+    <h2 *ngIf="sortedCategory">{{sortedCategory}}: <b>{{sortedName}}</b></h2>
+    <div class="container">
+        <div class="col-md-12" *ngFor="let item of items">
+            <!-- Product box-->
+            <div class="prod-info-main prod-wrap clearfix">
+                <div class="row">
+                    <!-- Product image  -->
+                    <div class="col-md-5 col-sm-12 col-xs-12">
+                        <div class="product-image">
+                            <ng-container *ngIf="item.ended && item.buyPrice === null; else checkSold">
+                                <div class="tag-ended">ENDED</div>
+                            </ng-container>
+                            <ng-template #checkSold>
+                                <div class="tag-sold" *ngIf="item.buyPrice != null">WON</div>
+                            </ng-template>
+                            <app-image-carousel [images]="item.images"></app-image-carousel>
+                        </div>
+
+                    </div>
+                    <!--Product details-->
+                    <div class="col-md-7 col-sm-12 col-xs-12">
+                        <div class="product-deatil">
+                            <h5 class="name">
+                                <a href="#">{{item.name}}</a> <br>
+                                <a (click)="onCategorySelect(c)" *ngFor="let c of item.categories"><span>{{c.name}}</span></a>                           
+                            </h5>
+                            <p class="price-container" *ngIf="item.buyPrice === null && item.ended">Final Bid: <span>{{item.currentBid}} $</span></p>
+                            <p class="price-container" *ngIf="item.buyPrice === null && !item.ended">Current Bid: <span>{{item.currentBid}} $</span></p>
+                            <p class="price-container" *ngIf="item.buyPrice !== null">Bought price: <span>{{item.buyPrice}} $</span></p>
+                        </div>
+                        <div class="description">
+                            <p><span>{{item.description}}</span></p>
+                        </div>
+                        <div class="product-info smart-form">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <a (click)="onSelect(item)" class="btn btn-info">Info</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end product -->
+        </div>
+    </div>
+</div>
+
+<alert></alert>
+
+<ng-template #load>
+    Loading Item List...
+</ng-template>
+

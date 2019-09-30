@@ -1,0 +1,18 @@
+<h3>SITE USERS:</h3>
+<!-- <div *ngIf="users.length == 0"> 
+    <p> No registration requests available. </p> -->
+    <!-- <a routerLink="{{currentHome}}">Go to homepage</a>     -->
+<!-- </div> -->
+<!-- <div *ngIf="users.length > 0"> -->
+<ol>
+    <li *ngFor="let user of users">
+        {{user.username}} 
+        <button (click)="showUserInfo(user.publicId)">Info</button>
+        <!-- <router-outlet></router-outlet> -->
+        <!-- - <a (click)="acceptUser(user.publicId)">Accept</a> -->
+        <!-- <alert></alert> -->
+        <!-- - <a (click)="acceptUser(user.public_id)">Delete</a> -->
+    </li>
+</ol>
+<!-- </div> -->
+

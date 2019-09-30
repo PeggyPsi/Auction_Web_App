@@ -1,0 +1,17 @@
+<form [formGroup]="bidForm">
+    <!-- amount -->
+    <div class="form form-group">
+        <label for="amount" id="label">Your bid</label>
+        <input type="text" formControlName="amount" class="form-control" placeholder="Place your bid"/>
+        <div *ngIf="f.amount.invalid && (f.amount.dirty || f.amount.touched) || submitted ">
+            <div *ngIf="f.amount.errors?.required" >Bid is required</div>
+            <div *ngIf="f.amount.hasError('BidCheck')" >Your bid must be over current one</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <button [disabled]="loading || item.ended" class="bid-btn btn btn-default btn-block" (click)="bid()">BID</button>
+        <button [disabled]="loading || item.ended || item.buyOffer===null" class="buy-btn btn btn-default btn-block" (click)="buy()">BUY</button>
+    </div>
+</form>
+
+<alert></alert>

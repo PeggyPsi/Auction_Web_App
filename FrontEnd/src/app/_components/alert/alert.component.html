@@ -1,0 +1,10 @@
+﻿<!-- {{message.text}} -->
+<!-- {{updateMessage()}} -->
+<div *ngIf="message">
+    <div [ngClass]="{ 'alert': message, 'alert-success': message.type === 'success', 'alert-danger': message.type === 'error' }">
+        <!-- <div class="alert"> -->
+            {{message.text}}
+            <b class="btn" (click)="clearMessage()"> X </b>
+        <!-- </div> -->
+    </div>
+</div>

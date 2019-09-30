@@ -1,0 +1,60 @@
+<!-- Buttons only for seller and user/visitor browsing  -->
+<div *ngIf="url.includes('seller') || url.includes('browse')">
+    <!--ALL-->
+    <ng-container *ngIf="type === 'all' ; then activeAll ; else inactiveAll"></ng-container>
+    <ng-template #activeAll>
+        <button class="btn btn-default all activated" (click)="onClick('all')">All Auctions</button>
+    </ng-template>
+    <ng-template #inactiveAll>
+        <button class="btn btn-default all" (click)="onClick('all')">All Auctions</button>
+    </ng-template>
+
+    <!--Active-->
+    <ng-container *ngIf="type === 'active' ; then activeActive ; else inactiveActive"></ng-container>
+    <ng-template #activeActive>
+        <button class="btn btn-default active activated" (click)="onClick('active')">Active Auctions</button>
+    </ng-template>
+    <ng-template #inactiveActive>
+        <button class="btn btn-default active" (click)="onClick('active')">Active Auctions</button>
+    </ng-template>
+
+    <!--Inactive (only for seller items)-->
+    <ng-container *ngIf="url.includes('seller')">
+        <ng-container *ngIf="type === 'inactive' ; then activeInactive ; else inactiveInactive"></ng-container>
+        <ng-template #activeInactive>
+            <button class="btn btn-default active activated" (click)="onClick('inactive')">Inactive Auctions</button>
+        </ng-template>
+        <ng-template #inactiveInactive>
+            <button class="btn btn-default active" (click)="onClick('inactive')">Inactive Auctions</button>
+        </ng-template>  
+    </ng-container>
+
+    <!--Completed-->
+    <ng-container *ngIf="type === 'completed' ; then activeComp ; else inactiveComp"></ng-container>
+    <ng-template #activeComp>
+        <button class="btn btn-default completed activated" (click)="onClick('completed')">Completed Auctions</button>
+    </ng-template>
+    <ng-template #inactiveComp>
+        <button class="btn btn-default completed" (click)="onClick('completed')">Completed Auctions</button>
+    </ng-template>
+</div>
+
+<div *ngIf="url.includes('bidder')">
+    <!--Bidded-->
+    <ng-container *ngIf="type === 'bidded' ; then activeBidded ; else inactiveBidded"></ng-container>
+    <ng-template #activeBidded>
+        <button class="btn btn-default active activated" (click)="onClick('bidded')">Bidded Auctions</button>
+    </ng-template>
+    <ng-template #inactiveBidded>
+        <button class="btn btn-default active" (click)="onClick('bidded')">Bidded Auctions</button>
+    </ng-template>   
+    
+    <!--Won-->
+    <ng-container *ngIf="type === 'won' ; then activeWon ; else inactiveWon"></ng-container>
+    <ng-template #activeWon>
+        <button class="btn btn-default active activated" (click)="onClick('won')">Won Auctions</button>
+    </ng-template>
+    <ng-template #inactiveWon>
+        <button class="btn btn-default active" (click)="onClick('won')">Won Auctions</button>
+    </ng-template> 
+</div>

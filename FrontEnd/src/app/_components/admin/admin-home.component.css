@@ -1,0 +1,45 @@
+.admin-choice.btn {
+    padding: 130px;
+    margin: 10px;
+    border-radius: 4px;
+    background-color: #dba0e7;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.admin-choice.btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .admin-choice.btn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .admin-choice.btn:hover span {
+    padding-right: 25px;
+  }
+  
+  .admin-choice.btn:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  .container{
+      text-align: center;
+      border-style: groove;
+      border-radius: 5px;
+      padding: 50px;
+      margin-top: 30px;
+  }

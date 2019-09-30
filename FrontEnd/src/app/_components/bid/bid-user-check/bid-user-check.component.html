@@ -1,0 +1,13 @@
+<!-- <h1 mat-dialog-title>Hi {{data.name}}</h1> -->
+<div mat-dialog-content class="dialog-content">
+  <h3>{{message}}</h3>
+  <p>If you press YES you will not be able to change it.</p>
+  <!-- <mat-form-field>
+    <input matInput [(ngModel)]="data.animal">
+  </mat-form-field> -->
+</div>
+<div mat-dialog-actions class="dialog-actions">
+  <button mat-button class="btn btn-default" [mat-dialog-close]="false">NO</button>
+  <!-- <button mat-button class="btn btn-default" [mat-dialog-close]="data.check" cdkFocusInitial>YES</button> -->
+  <button mat-button class="btn btn-default" [mat-dialog-close]="true" cdkFocusInitial>YES</button>
+</div>

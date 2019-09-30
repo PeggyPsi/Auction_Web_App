@@ -1,0 +1,19 @@
+<div class="mail-box">
+    <aside class="sm-side">
+        <div class="user-head">
+            <h3>CHAT</h3>
+        </div>
+        <ul class="inbox-nav inbox-divider">
+            <li >
+                <a routerLink="/user/chat/inbox"><i class="fa fa-inbox"></i> Inbox </a>
+
+            </li>
+            <li>
+                <a routerLink="/user/chat/outbox"><i class="fa fa-envelope-o"></i> Outbox</a>
+            </li>
+        </ul>
+    </aside>
+    <aside class="lg-side">
+        <router-outlet></router-outlet>
+    </aside>
+</div>

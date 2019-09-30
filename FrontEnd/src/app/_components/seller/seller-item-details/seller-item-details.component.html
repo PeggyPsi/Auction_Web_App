@@ -1,0 +1,84 @@
+<alert></alert>
+<div *ngIf = "loadedItem; else load">   
+    <div class="container">
+        <div class="header">
+            <h1>Item Info</h1>
+        </div>
+        
+        <a *ngIf="!item.active" class="start btn btn-warning btn-lg btn-block" (click)="openDialog()">START AUCTION NOW</a>
+
+        <div class="card">
+            <div class="container-fliud">
+                <div class="wrapper row">
+
+                    <!-- Images  -->
+                        
+                    <div class="preview col-md-6">
+                        <ng-container *ngIf="item.ended && item.buyPrice === null; else checkSold">
+                            <div class="tag-ended">ENDED</div>
+                        </ng-container>
+                        <ng-template #checkSold>
+                            <div class="tag-sold" *ngIf="item.buyPrice != null">SOLD</div>
+                        </ng-template>
+                        <app-image-carousel [images]="item.images"></app-image-carousel>                       
+                    </div>
+                    <div class="details col-md-6">
+                        <h3 *ngIf="!item.active"><b> Auction starts on : {{item.auctionStart.toString().substr(0,16).split('T')}} </b></h3>
+                        <h3 *ngIf="item.active && !item.ended"><b> Auction ends on : {{item.auctionEnd.toString().substr(0,16).split('T')}} </b></h3>
+                        <h3 class="product-title">{{item.name}} <span class="country">({{item.location.location}}, {{item.location.country}})</span> </h3>
+                        <div *ngFor="let c of item.categories" class="category"> {{c.name}} </div>
+                        <p class="product-description">{{item.description}}</p>
+                         
+                        <h4 class="price" *ngIf="item.buyPrice === null && item.ended">Final Bid: <span>{{item.currentBid}} $</span></h4>
+                        <h4 class="price-container" *ngIf="item.buyPrice === null && !item.ended">Current Bid: <span>{{item.currentBid}} $</span></h4>
+                        <h4 class="price-container" *ngIf="item.buyPrice !== null">Bought price: <span>{{item.buyPrice}} $</span></h4>
+
+                        <h5>Intitial price: <span>{{item.firstBid}} $</span></h5>
+                        <h5 *ngIf="item.buyOffer !== null" >Buy Price Offer: <span>{{item.buyOffer}} $</span></h5>
+                        <h6>Bids: <span>{{item.noBids}}</span> </h6>
+                        <!--Show buyer-->
+                        <div *ngIf="item.buyPrice">
+                            <h6>Buyer: <span>{{item.buyer.username}}</span> </h6>
+                        </div>
+                        <div class="action">
+                            <button type="button" class="btn btn-primary btn-lg" (click)="editItem()" [disabled]="disableEditingDeletion">Edit item</button>
+                            <button type="button" class="btn btn-warning btn-lg" (click)="deleteItem()" [disabled]="disableEditingDeletion">Delete item</button>
+                            <button type="button" class="btn btn-default btn-lg" routerLink="/user/seller">Go to your items</button>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="item.buyPrice">
+                    <div class="won col-md-12">
+                        <h2> Item is sold!</h2>
+                        <button class="comm-btn btn btn-default" type="button" (click)="messageBuyer(item.buyer)">Send message to {{item.buyer.username}}</button>
+                        <button class="rate-btn btn btn-default" type="button" *ngIf="ratingForBuyerPlaced === 'false'" (click)="rateBuyer()">Rate buyer {{item.buyer.username}}</button>
+                        <button class="rate-btn btn btn-default" type="button" *ngIf="ratingForBuyerPlaced === 'true'" disabled>You have already rated this user</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">  
+                <div class="card">
+                    <!-- Highest Bids  -->
+                    <div class="highest-bids col-md-12">
+                        <app-highest-bids [item]="item"></app-highest-bids>
+                    </div>
+                </div>                
+            </div>
+            <div class="col-md-6" *ngIf="item.location.latitude!=null">  
+                <div class="card">
+                    <!-- Item location  -->
+                    <app-map-item-details [item]="item"></app-map-item-details>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<ng-template #load>
+    Loading Item Details...
+</ng-template>

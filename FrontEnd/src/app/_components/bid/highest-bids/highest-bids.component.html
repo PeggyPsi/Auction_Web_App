@@ -1,0 +1,29 @@
+<h2>Top {{maxSlots}} Highest Bids</h2>
+
+<div *ngIf = "loadedBids; else load">
+    <table class="table">
+        <thead>
+            <tr>
+            <th scope="col"></th>
+            <th scope="col">Username</th>
+            <th scope="col">Bid</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let bid of bids; let i=index">
+                <th scope="row">{{i+1}}</th>
+                <td>{{bid.bidder.username}}</td>
+                <td>{{bid.amount}}</td>
+            </tr>
+            <tr *ngFor="let index of emptySlots">
+                <th scope="row">{{index}}</th>
+                <td>-</td>
+                <td>-</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<ng-template #load>
+    Loading Highest Bids...
+</ng-template>

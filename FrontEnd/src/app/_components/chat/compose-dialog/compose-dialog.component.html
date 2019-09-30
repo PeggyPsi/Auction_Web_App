@@ -1,0 +1,33 @@
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-body">
+            <!-- <form role="form" class="form-horizontal"> -->
+            <form [formGroup]="messageForm" class="form-horizontal" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">To</label>
+                    <div class="col-lg-10">
+                        <!-- <input type="text" placeholder="" formControlName="to" id="inputEmail1" class="form-control"> -->
+                        <tag-input disable="true" formControlName="to" placeholder = "" secondaryPlaceholder="" maxItems="1" onlyFromAutocomplete="true" clearOnBlur = "true" separatorKeys="[',']">
+                            <tag-input-dropdown focusFirstElement="true">
+                            </tag-input-dropdown>
+                        </tag-input>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">Message</label>
+                    <div class="col-lg-10">
+                        <textarea rows="10" cols="30" formControlName="message" class="form-control" id="" name=""></textarea>
+                        <div *ngIf="f.message.invalid && (f.message.dirty || f.message.touched) || submitted ">
+                            <div *ngIf="f.message.errors?.required" >Message is required</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <button mat-button class="btn btn-block btn-send" type="submit">Send</button>
+                    <button mat-button class="btn btn-block btn-cancel" (click)="onNoClick()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->

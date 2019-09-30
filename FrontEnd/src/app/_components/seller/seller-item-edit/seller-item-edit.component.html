@@ -1,0 +1,173 @@
+<!-- https://colorlib.com/etc/regform/colorlib-regform-5/ -->
+
+<div *ngIf="loadedItem; else load" class="page-wrapper bg-gra-01 p-t-45 p-b-50">
+    <div class="wrapper wrapper--w790">
+        <div class="card card-5">
+            <div class="card-heading">
+                <h2 class="title">Edit item Form</h2>
+            </div>
+            <div class="card-body">
+                <form [formGroup]="itemForm" (ngSubmit)="onSubmit()">
+                    <hr class="line p-b-20">
+                    <label class="header">General Info</label>
+                    <!-- Name, description-->
+                    <div class="form-row m-b-55">
+                        <div class="value">
+                            <div class="row row-space">
+                                <div class="col-5">
+                                    <div class="input-group-desc">
+                                        <label for="name" class="label--desc">Name*</label>
+                                        <input type="text" formControlName="name" class="input--style-5">
+                                        <div *ngIf="f.name.invalid && (f.name.dirty || f.name.touched) || submitted ">
+                                            <div *ngIf="f.name.errors?.required" >Name is required</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <div class="input-group-desc">
+                                        <label for="description" class="label--desc">Description*</label>
+                                        <input type="text" formControlName="description" class="input--style-5"/>
+                                        <!-- <textarea formControlname="description" class= "form-control" maxlength="100" required></textarea> -->
+                                        <div *ngIf="f.description.invalid && (f.description.dirty || f.description.touched) || submitted ">
+                                            <div *ngIf="f.description.errors?.required" >Description is required</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Categories -->
+                    <div class="form-row">
+                        <div class="value">
+                            <div class="row row-space">
+                                <div class="col-10">
+                                    <!--Categories-->
+                                    <div class="input-group-desc">
+                                        <label for="categories" class="label--desc">Category (seperate with comma)</label>
+                                        <tag-input formControlName="categories" 
+                                        placeholder = "+ Category" 
+                                        secondaryPlaceholder = "Add new category" clearOnBlur = "true" separatorKeys="[',']"
+                                        onlyFromAutocomplete = "true">
+                                            <tag-input-dropdown [autocompleteItems]="categoriesArray">
+                                            </tag-input-dropdown>
+                                        </tag-input>
+                                        <!-- <input type="text" data-role="tagsinput" /> -->
+                                        <div *ngIf="f.categories.invalid && (f.categories.dirty || f.categories.touched) || submitted ">
+                                            <div *ngIf="f.categories.errors?.required" >At least one category is required</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Initial Bid , Buy Price-->
+                    <div class="form-row m-b-55">
+                        <div class="value">
+                            <div class="row row-space">
+                                <div class="col-5">
+                                    <div class="input-group-desc">
+                                        <label for="firstBid" class="label--desc">Initial Bid*</label>
+                                        <input type="number" formControlName = "firstBid" value="10.00" min="0" step="0.01" data-number-to-fixed="2" data-number-stepfactor="100" class="input--style-5"/>
+                                        <div *ngIf="f.firstBid.invalid && (f.firstBid.dirty || f.firstBid.touched) || submitted ">
+                                            <div *ngIf="f.firstBid.errors?.required" >Initial bid is required</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <div class="input-group-desc">
+                                        <label for="buyOffer" class="label--desc">Buy Price</label>
+                                        <input type="number" formControlName = "buyOffer" value="10.00" min="0" step="0.01" data-number-to-fixed="2" data-number-stepfactor="100" class="input--style-5"/>
+                                        <div *ngIf="f.buyOffer.invalid && (f.buyOffer.dirty || f.buyOffer.touched) || submitted ">
+                                            <div *ngIf="f.buyOffer.hasError('IntitialAndBuy')" >Buy price must be greater than first bid</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Start and end-->
+                    <div class="form-row m-b-55">
+                        <div class="value">
+                            <div class="row row-space">
+                                <div class="col-5">
+                                    <div class="input-group-desc">
+                                        <label for="auctionStart" class="label--desc">Auction Start</label>
+                                        <input type="datetime-local" formControlName="auctionStart" class="input--style-5">
+                                        <div *ngIf="f.auctionStart.invalid && (f.auctionStart.dirty || f.auctionStart.touched) || submitted " >
+                                            <div *ngIf="f.auctionStart.errors?.required" >Auction start date is required</div>
+                                            <!-- <div *ngIf="f.auctionStart.hasError('DatesValid')"> Start date must be before end date!</div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <div class="input-group-desc">
+                                        <label for="auctionEnd" class="label--desc">Auction End</label>
+                                        <input type="datetime-local" formControlName="auctionEnd" class="input--style-5">
+                                        <div *ngIf="f.auctionEnd.invalid && (f.auctionEnd.dirty || f.auctionEnd.touched) || submitted || f.auctionStart.invalid || (f.auctionStart.dirty || f.auctionStart.touched)">
+                                            <div *ngIf="f.auctionEnd.errors?.required" >Auction end date is required</div>
+                                            <div *ngIf="f.auctionEnd.hasError('DatesValid')"> End date must be after start date!</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <app-map-item-create [item]="item"></app-map-item-create>
+
+                    <hr class="line p-b-20">
+                    <label class="header">Images</label>
+                    <div class="form-row m-b-55">
+                        <div class="value">
+                            <div class="row row-space">
+                                <!-- <div class="col-10"> -->
+                                    <!--Images-->
+                                    <div *ngFor='let image of item.images' class="col-5">
+                                        <div class="image-container">
+                                            <img src="data:image/jpeg;base64,{{image.content}}" height="100">
+                                            <button class="btn btn-info" (click)="removeImageExists(image.id)" >Remove</button>
+                                        </div>
+                                    </div>
+                                    <!-- UPLOAD PICTURES-->
+                                    <div *ngFor='let image of html_images ; let i=index' class="col-5">
+                                        <div class="image-container">
+                                            <img [src]="image.url" height="200">
+                                            <ng-container *ngIf="image.large === true ; then large ; else notLarge"></ng-container>
+                                            <ng-template #large>
+                                                Picture will not be uploaded. Exceeds file size.
+                                            </ng-template>
+                                            <ng-template #notLarge>
+                                                <button (click)="removeImage(i, image.image_ref)" class="btn btn-info">Remove</button>
+                                            </ng-template>
+                                        </div>
+                                    </div>
+                                <!-- </div> -->
+                            </div>
+                            <div class="row row-space">
+                                <div class="col-4">
+                                    <!-- <label for="images" >Images (max 1Mb each)</label> -->
+                                    <input type='file' id="images" (change)="onSelectFile($event)" class="btn btn-info btn--radius-2 files btn--green" multiple>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <input input="number" value="{{item.id}}" formControlName="id"  hidden />
+                    </div> 
+
+                    <div class="register-button">
+                        <button class="btn btn--radius-2 btn--red" type="submit">Save</button>
+                        <!-- <button class="btn btn--radius-2 btn--red" type="submit">Cancel</button> -->
+                        <!-- <a routerLink="{{currentHome}}" class="btn btn-link">Cancel</a> -->
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<ng-template #load>
+    Loading Item Update...
+</ng-template>
+    

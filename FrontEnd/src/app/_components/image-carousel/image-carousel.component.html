@@ -1,0 +1,26 @@
+<div *ngIf="loadImages; else load">
+    <ng-container *ngIf="images.length>0 ; then carousel ; else empty"></ng-container>
+    <!-- There are images to show  -->
+    <ng-template #carousel>
+        <ngb-carousel>
+            <div class="carousel">
+                <ng-template ngbSlide paused *ngFor="let image of images" [id]="image.id" >
+                    <img src="data:image/jpeg;base64,{{image.content}}" [alt]="image.name">
+                    <div class="carousel-caption">
+                        <h3>{{image.description}}</h3>
+                    </div>
+                </ng-template>
+            </div>
+        </ngb-carousel>
+    </ng-template>
+    
+    <!-- No image to show -->
+    <ng-template #empty>
+        <img src="https://www.sylff.org/wp-content/uploads/2016/04/noImage.jpg">
+    </ng-template>
+</div>
+
+<ng-template #load>
+    Loading images...
+</ng-template>
+

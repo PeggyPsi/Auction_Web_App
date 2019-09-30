@@ -1,0 +1,1006 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ee314cf8-f46c-4dcf-9eaa-60b4615af19e" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/classes/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Services/Declarations/ItemService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="10" column="19" selection-start-line="10" selection-end-line="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Services/Implementations/ItemServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2145">
+              <caret line="352" column="50" selection-start-line="352" selection-start-column="50" selection-end-line="352" selection-end-column="50" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#saveItem#0;class#ItemServiceImpl#0" />
+                <element signature="method#updateItem#0;class#ItemServiceImpl#0" />
+                <element signature="method#deleteItem#0;class#ItemServiceImpl#0" />
+                <element signature="method#extractToJson#0;class#ItemServiceImpl#0" />
+                <element signature="method#startAuction#0;class#ItemServiceImpl#0" />
+                <element signature="method#searchByText#0;class#ItemServiceImpl#0" />
+                <element signature="method#updateIfEnded#0;class#ItemServiceImpl#0" />
+                <element signature="method#getItemsByCategory#0;class#ItemServiceImpl#0" />
+                <element signature="method#getItemsByPrice#0;class#ItemServiceImpl#0" />
+                <element signature="method#getItemsByCategoryAndPrice#0;class#ItemServiceImpl#0" />
+                <element signature="method#getItem#0;class#ItemServiceImpl#0" />
+                <element signature="method#getItemsNewest#0;class#ItemServiceImpl#0" />
+                <element signature="method#getItemsBySeller#0;class#ItemServiceImpl#0" />
+                <element signature="method#getItemsBySellerAndCategory#0;class#ItemServiceImpl#0" />
+                <element signature="method#getItemsBySellerAndPrice#0;class#ItemServiceImpl#0" />
+                <element signature="method#getItemsBySellerAndCategoryAndPrice#0;class#ItemServiceImpl#0" />
+                <element signature="method#getBidItemsByBidder#0;class#ItemServiceImpl#0" />
+                <element signature="method#getBidItemsByBidderAndCategory#0;class#ItemServiceImpl#0" />
+                <element signature="method#getBidItemsByBidderAndPrice#0;class#ItemServiceImpl#0" />
+                <element signature="method#getBidItemsByBidderAndCategoryAndPrice#0;class#ItemServiceImpl#0" />
+                <element signature="method#getWonItemsByBidder#0;class#ItemServiceImpl#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Services/Implementations/BidServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="37" column="14" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#getBids#0;class#BidServiceImpl#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Configurations/MessagesValidatorConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Configurations/HTTPSConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Configurations/WebMvcConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Configurations/WebSecurity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="437">
+              <caret line="79" column="72" selection-start-line="79" selection-start-column="72" selection-end-line="79" selection-end-column="72" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Utils/Utils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="480">
+              <caret line="41" selection-start-line="41" selection-start-column="2" selection-end-line="42" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Repositories/ItemRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>password_confirm</find>
+      <find>Iconstants</find>
+      <find>UserDTO</find>
+      <find>this</find>
+      <find>.</find>
+      <find>=</find>
+      <find>itemEntity</find>
+      <find>Entity</find>
+      <find>Set</find>
+      <find>toString</find>
+      <find>category</find>
+      <find>setSeen</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>pwConfirm</replace>
+      <replace>Constants</replace>
+      <replace>UserDetailsResponse</replace>
+      <replace>item</replace>
+      <replace>.get</replace>
+      <replace>()</replace>
+      <replace>itemDetailsResponse</replace>
+      <replace>Details</replace>
+      <replace>List</replace>
+      <replace>categoryEnum</replace>
+    </replaceStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Models/Item_Category/ItemCategoryEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Models/User/UserDetailsResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Models/Category/CategoryEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Controllers/TokenController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Models/User/UserXml.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Models/Category/CategoryXml.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Models/User/SellerXml.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Models/Location/CountryXml.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Models/Location/LocationXml.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Services/Declarations/CategoryService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Models/Category/Enum/CategoryEnumDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Services/Implementations/CategoryServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Controllers/CategoryController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Repositories/CategoryRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Models/Category/CategoryDetails.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Models/User/UserDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Repositories/UserRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Services/Implementations/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Repositories/BidRepository.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/ted/auction_app/AuctionAppApplicationTests.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Models/Bid/BidEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Models/Bid/BidDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Models/Message/MessageEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Models/Message/MessageDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Models/User/BidderXml.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Models/Bid/BidXml.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Services/Declarations/MessageService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Repositories/MessageRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Services/Implementations/MessageServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Controllers/MessageController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Models/Rating/RatingEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Repositories/RatingRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Controllers/RatingController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Services/Declarations/RatingService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Services/Implementations/RatingServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Services/Declarations/ItemService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Configurations/WebSecurity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Controllers/ItemController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Models/Item/ItemEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Models/Item/ItemDetailsResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Models/Item/ItemDetailsRequest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Models/Item/ItemXml.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Models/Item/ItemDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Controllers/BidController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Services/Declarations/BidService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Repositories/ItemRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Utils/Utils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Services/Implementations/ItemServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Services/Implementations/BidServiceImpl.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="43" />
+    <option name="y" value="-4" />
+    <option name="width" value="1877" />
+    <option name="height" value="1084" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="auction_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BackEnd" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auction_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BackEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auction_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BackEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auction_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BackEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auction_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BackEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="auction_app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auction_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BackEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="auction_app" type="462c0819:PsiDirectoryNode" />
+              <item name="Configurations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="auction_app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BackEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/ted/auction_app/Configurations" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.AuctionAppApplication">
+    <configuration name="AuctionAppApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="auction_app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ted.auction_app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.ted.auction_app" />
+      <option name="MAIN_CLASS_NAME" value="com.ted.auction_app.AuctionAppApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuctionAppApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="auction_app" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ted.auction_app.AuctionAppApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AuctionAppApplicationTests" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ee314cf8-f46c-4dcf-9eaa-60b4615af19e" name="Default Changelist" comment="" />
+      <created>1565813001562</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1565813001562</updated>
+      <workItem from="1565813006438" duration="17000" />
+      <workItem from="1565945756639" duration="9839000" />
+      <workItem from="1565988190106" duration="8000" />
+      <workItem from="1566052748430" duration="2949000" />
+      <workItem from="1566117631932" duration="4603000" />
+      <workItem from="1566198989741" duration="5072000" />
+      <workItem from="1566217538456" duration="8310000" />
+      <workItem from="1566286265556" duration="599000" />
+      <workItem from="1566302181876" duration="7785000" />
+      <workItem from="1566318997496" duration="2950000" />
+      <workItem from="1566382244468" duration="3864000" />
+      <workItem from="1566406646540" duration="785000" />
+      <workItem from="1566463972986" duration="17928000" />
+      <workItem from="1566557377816" duration="680000" />
+      <workItem from="1566566172567" duration="1214000" />
+      <workItem from="1566573386263" duration="2846000" />
+      <workItem from="1566590537312" duration="2000" />
+      <workItem from="1566590564107" duration="2449000" />
+      <workItem from="1566640111576" duration="1336000" />
+      <workItem from="1566656977171" duration="622000" />
+      <workItem from="1566731990397" duration="4109000" />
+      <workItem from="1566741578148" duration="1838000" />
+      <workItem from="1566820121150" duration="7081000" />
+      <workItem from="1566886858923" duration="25504000" />
+      <workItem from="1566917278161" duration="6476000" />
+      <workItem from="1566924355805" duration="834000" />
+      <workItem from="1566940477965" duration="5309000" />
+      <workItem from="1566975203088" duration="22329000" />
+      <workItem from="1567069986585" duration="8788000" />
+      <workItem from="1567091237125" duration="1248000" />
+      <workItem from="1567146655191" duration="9402000" />
+      <workItem from="1567165791617" duration="15104000" />
+      <workItem from="1567193733211" duration="625000" />
+      <workItem from="1567237662968" duration="1051000" />
+      <workItem from="1567357186107" duration="3572000" />
+      <workItem from="1567519266235" duration="621000" />
+      <workItem from="1567679453290" duration="1000" />
+      <workItem from="1567682096067" duration="14432000" />
+      <workItem from="1567758716087" duration="3674000" />
+      <workItem from="1567784052581" duration="1307000" />
+      <workItem from="1567809718900" duration="658000" />
+      <workItem from="1567844051061" duration="616000" />
+      <workItem from="1567856202407" duration="2575000" />
+      <workItem from="1567865685586" duration="7032000" />
+      <workItem from="1567939443754" duration="8038000" />
+      <workItem from="1567962442384" duration="3527000" />
+      <workItem from="1568010706076" duration="4652000" />
+      <workItem from="1568030588115" duration="1305000" />
+      <workItem from="1568034768912" duration="2819000" />
+      <workItem from="1568053861651" duration="1338000" />
+      <workItem from="1568059127187" duration="3434000" />
+      <workItem from="1568104238154" duration="12731000" />
+      <workItem from="1568120955650" duration="3673000" />
+      <workItem from="1568149188199" duration="1218000" />
+      <workItem from="1568196328309" duration="627000" />
+      <workItem from="1568205641893" duration="624000" />
+      <workItem from="1568212798484" duration="827000" />
+      <workItem from="1568214396344" duration="4819000" />
+      <workItem from="1568282720422" duration="2544000" />
+      <workItem from="1568290891926" duration="5298000" />
+      <workItem from="1568301524757" duration="1205000" />
+      <workItem from="1568310864725" duration="5061000" />
+      <workItem from="1568367433343" duration="1525000" />
+      <workItem from="1568370793955" duration="2016000" />
+      <workItem from="1568375514446" duration="5904000" />
+      <workItem from="1568381998769" duration="614000" />
+      <workItem from="1568462891700" duration="622000" />
+      <workItem from="1568467864715" duration="9363000" />
+      <workItem from="1568539501535" duration="6321000" />
+      <workItem from="1568547158389" duration="2049000" />
+      <workItem from="1568829187377" duration="1685000" />
+      <workItem from="1569186273494" duration="1697000" />
+      <workItem from="1569318730856" duration="1446000" />
+      <workItem from="1569328310982" duration="1573000" />
+      <workItem from="1569335765224" duration="7799000" />
+      <workItem from="1569353628788" duration="2337000" />
+      <workItem from="1569400719227" duration="4319000" />
+      <workItem from="1569425874756" duration="702000" />
+      <workItem from="1569430168667" duration="2476000" />
+      <workItem from="1569488831037" duration="1755000" />
+      <workItem from="1569492721578" duration="3881000" />
+      <workItem from="1569502467744" duration="585000" />
+      <workItem from="1569506953522" duration="1416000" />
+      <workItem from="1569515020355" duration="2872000" />
+      <workItem from="1569521367003" duration="670000" />
+      <workItem from="1569570123493" duration="866000" />
+      <workItem from="1569572348095" duration="2499000" />
+      <workItem from="1569575289532" duration="1294000" />
+      <workItem from="1569577244266" duration="2321000" />
+      <workItem from="1569593563531" duration="652000" />
+      <workItem from="1569605022905" duration="1624000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="AuctionAppApplicationTests - 2019.09.10 at 12h 54m 33s.xml">
+      <configuration name="AuctionAppApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AuctionAppApplicationTests - 2019.09.10 at 12h 56m 35s.xml">
+      <configuration name="AuctionAppApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AuctionAppApplicationTests - 2019.09.10 at 12h 58m 10s.xml">
+      <configuration name="AuctionAppApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AuctionAppApplicationTests - 2019.09.10 at 12h 59m 06s.xml">
+      <configuration name="AuctionAppApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AuctionAppApplicationTests - 2019.09.10 at 12h 59m 41s.xml">
+      <configuration name="AuctionAppApplicationTests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="AuctionAppApplicationTests - 2019.09.10 at 13h 02m 56s.xml">
+      <configuration name="AuctionAppApplicationTests" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="354667000" />
+  </component>
+  <component name="TodoView" selected-index="1">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="43" y="-4" width="1877" height="1084" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2342982" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32960325" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.03051882" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39979756" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32960325" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.32960325" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32960325" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32960325" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="bottom" id="Messages" order="14" weight="0.40183112" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Services/Declarations/CategoryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Services/Implementations/CategoryServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="14" selection-start-line="14" selection-end-line="14" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Models/Category/CategoryDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" selection-start-line="9" selection-end-line="48" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#638#639#0" expanded="true" />
+            <element signature="e#663#664#0" expanded="true" />
+            <element signature="e#700#701#0" expanded="true" />
+            <element signature="e#728#729#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/ted/auction_app/AuctionAppApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="12" column="32" lean-forward="true" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/AuctionAppApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Models/Bid/BidDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Repositories/CategoryRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="22" column="66" selection-start-line="22" selection-start-column="66" selection-end-line="22" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Services/Declarations/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Repositories/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="11" column="75" lean-forward="true" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Controllers/CategoryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="23" selection-start-line="23" selection-end-line="30" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Models/Message/MessageDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="52" column="29" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Models/User/SellerXml.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/item1.xml" />
+    <entry file="file://$PROJECT_DIR$/JSONS/item1.xml" />
+    <entry file="file://$PROJECT_DIR$/JSONS/item1.json" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1290">
+          <caret line="86" column="34" selection-start-line="86" selection-start-column="34" selection-end-line="86" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Models/Bid/BidXml.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="40" selection-start-line="40" selection-end-line="42" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Models/User/BidderXml.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="40" selection-start-column="40" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Repositories/MessageRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="12" column="85" selection-start-line="12" selection-start-column="85" selection-end-line="12" selection-end-column="85" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Services/Declarations/MessageService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Services/Implementations/MessageServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="74" column="31" selection-start-line="74" selection-start-column="31" selection-end-line="74" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Controllers/MessageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="40" selection-start-column="40" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Models/Message/MessageEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="28" selection-start-line="28" selection-end-line="29" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2860#2861#0" expanded="true" />
+            <element signature="e#2891#2892#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Repositories/BidRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="74" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="74" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Models/Rating/RatingEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="28" column="36" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Repositories/RatingRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="102" selection-start-line="7" selection-start-column="102" selection-end-line="7" selection-end-column="102" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Services/Implementations/RatingServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="50" selection-start-line="3" selection-start-column="50" selection-end-line="3" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Services/Declarations/RatingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Controllers/RatingController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="705">
+          <caret line="47" selection-start-line="47" selection-end-line="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Models/Item/ItemEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3795">
+          <caret line="333" column="27" selection-start-line="333" selection-start-column="27" selection-end-line="333" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Controllers/BidController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Services/Declarations/BidService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="57" lean-forward="true" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Models/Item/ItemDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="282" column="27" selection-start-line="282" selection-start-column="27" selection-end-line="282" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Models/Item/ItemDetailsResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="34" column="227" selection-start-line="34" selection-start-column="227" selection-end-line="34" selection-end-column="227" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Models/Item/ItemDetailsRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="72" column="33" selection-start-line="72" selection-start-column="33" selection-end-line="72" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2165#2166#0" expanded="true" />
+            <element signature="e#2213#2214#0" expanded="true" />
+            <element signature="e#2253#2254#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Models/Item/ItemXml.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="75" column="33" selection-start-line="75" selection-start-column="33" selection-end-line="75" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/XMLS/item5.xml" />
+    <entry file="file://$PROJECT_DIR$/XMLS/item3.xml" />
+    <entry file="file://$PROJECT_DIR$/JSONS/item3.json" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Models/Bid/BidEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="53" column="43" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Controllers/ItemController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getAllItems#0;class#ItemController#0" />
+            <element signature="method#getItemsNewest#0;class#ItemController#0" />
+            <element signature="method#createItem#0;class#ItemController#0" />
+            <element signature="method#updateItem#0;class#ItemController#0" />
+            <element signature="method#getItem#0;class#ItemController#0" />
+            <element signature="method#deleteItem#0;class#ItemController#0" />
+            <element signature="method#getItemsBySeller#0;class#ItemController#0" />
+            <element signature="method#getItemsByCategory#0;class#ItemController#0" />
+            <element signature="method#startAuction#0;class#ItemController#0" />
+            <element signature="method#getBidItems#0;class#ItemController#0" />
+            <element signature="method#getWonItems#0;class#ItemController#0" />
+            <element signature="method#freeTextSearch#0;class#ItemController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Services/Declarations/ItemService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="19" selection-start-line="10" selection-end-line="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Services/Implementations/ItemServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2145">
+          <caret line="352" column="50" selection-start-line="352" selection-start-column="50" selection-end-line="352" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#saveItem#0;class#ItemServiceImpl#0" />
+            <element signature="method#updateItem#0;class#ItemServiceImpl#0" />
+            <element signature="method#deleteItem#0;class#ItemServiceImpl#0" />
+            <element signature="method#extractToJson#0;class#ItemServiceImpl#0" />
+            <element signature="method#startAuction#0;class#ItemServiceImpl#0" />
+            <element signature="method#searchByText#0;class#ItemServiceImpl#0" />
+            <element signature="method#updateIfEnded#0;class#ItemServiceImpl#0" />
+            <element signature="method#getItemsByCategory#0;class#ItemServiceImpl#0" />
+            <element signature="method#getItemsByPrice#0;class#ItemServiceImpl#0" />
+            <element signature="method#getItemsByCategoryAndPrice#0;class#ItemServiceImpl#0" />
+            <element signature="method#getItem#0;class#ItemServiceImpl#0" />
+            <element signature="method#getItemsNewest#0;class#ItemServiceImpl#0" />
+            <element signature="method#getItemsBySeller#0;class#ItemServiceImpl#0" />
+            <element signature="method#getItemsBySellerAndCategory#0;class#ItemServiceImpl#0" />
+            <element signature="method#getItemsBySellerAndPrice#0;class#ItemServiceImpl#0" />
+            <element signature="method#getItemsBySellerAndCategoryAndPrice#0;class#ItemServiceImpl#0" />
+            <element signature="method#getBidItemsByBidder#0;class#ItemServiceImpl#0" />
+            <element signature="method#getBidItemsByBidderAndCategory#0;class#ItemServiceImpl#0" />
+            <element signature="method#getBidItemsByBidderAndPrice#0;class#ItemServiceImpl#0" />
+            <element signature="method#getBidItemsByBidderAndCategoryAndPrice#0;class#ItemServiceImpl#0" />
+            <element signature="method#getWonItemsByBidder#0;class#ItemServiceImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Services/Implementations/BidServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="37" column="14" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getBids#0;class#BidServiceImpl#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Configurations/MessagesValidatorConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Configurations/HTTPSConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Configurations/WebMvcConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Utils/Utils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="41" selection-start-line="41" selection-start-column="2" selection-end-line="42" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Repositories/ItemRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/ted/auction_app/Configurations/WebSecurity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="79" column="72" selection-start-line="79" selection-start-column="72" selection-end-line="79" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

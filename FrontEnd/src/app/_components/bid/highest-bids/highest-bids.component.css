@@ -1,0 +1,7 @@
+h2, .table td , th{
+    text-align: center;   
+}
+
+.table thead {
+    background-color: #bab4f0;
+}

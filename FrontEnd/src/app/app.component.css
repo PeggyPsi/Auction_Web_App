@@ -1,0 +1,19 @@
+.bg-gra-01 {
+    /* background: -webkit-gradient(linear, left bottom, left top, from(#fbc2eb), to(#a18cd1)); */
+    background: -webkit-linear-gradient(bottom, #f5ecf2 0%, #e6e1f1 100%);
+    background: -moz-linear-gradient(bottom, #f5ecf2 0%, #e6e1f1 100%);
+    background: -o-linear-gradient(bottom, #f5ecf2 0%, #e6e1f1 100%);
+    background: linear-gradient(to top, #f5ecf2 0%, #e6e1f1 100%);
+  }
+
+  .p-t-5 {
+    padding-top: 5px;
+  }
+
+  .p-b-50 {
+    padding-bottom: 50px;
+  }
+
+  .page-wrapper {
+    min-height: 100vh;
+  }

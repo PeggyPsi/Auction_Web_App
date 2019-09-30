@@ -1,0 +1,24 @@
+<!-- https://codepen.io/tammykimkim/pen/yegZRw -->
+
+<div mat-dialog-content class="dialog-content">
+    <h3>{{message}}</h3>
+    <form [formGroup]="ratingForm">
+        <div class="form-group rate">
+            <input type="radio" id="star5" [value]="5" formControlName="star"/>
+            <label for="star5" title="text">5 stars</label>
+            <input type="radio" id="star4" [value]="4" formControlName="star"/>
+            <label for="star4" title="text">4 stars</label>
+            <input type="radio" id="star3" [value]="3" formControlName="star"/>
+            <label for="star3" title="text">3 stars</label>
+            <input type="radio" id="star2" [value]="2" formControlName="star"/>
+            <label for="star2" title="text">2 stars</label>
+            <input type="radio" id="star1" [value]="1" formControlName="star"/>
+            <label for="star1" title="text">1 star</label>
+        </div>
+    </form>
+</div>
+<div mat-dialog-actions class="dialog-actions">
+    <button mat-button class="btn btn-cancel" (click)="onNoClick()">Cancel</button>
+    <!-- <button mat-button class="btn btn-default" [mat-dialog-close]="data.check" cdkFocusInitial>YES</button> -->
+    <button mat-button class="btn btn-rate" (click)="rateUser()" cdkFocusInitial>OK</button>
+</div>

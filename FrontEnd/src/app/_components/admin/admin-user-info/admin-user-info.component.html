@@ -1,0 +1,31 @@
+<p>USER DETAILS</p>
+{{user.username}} {{user.fname}} {{user.lname}} {{user.email}} {{user.phone}} {{user.afm}}
+
+<div *ngIf="user.username !== 'admin' ">
+    <p>LOCATION INFO</p>
+    {{user.location.location}} {{user.location.country}}
+
+    <!-- Show choice for acceptance or not from admin
+    The message depends on whether the user is already accepted or not -->
+    <ng-container *ngIf="user.verified; then verified ; else notVerified">
+    </ng-container>
+
+    <ng-template #verified>
+        <div>
+            <!-- User is verified
+            Admin can use unverify-->
+            <button (click)="verifyUser(user.publicId, false)">Cancel</button>
+        </div>
+    </ng-template>
+    <ng-template #notVerified>
+        <div>
+            <!-- User is unverified
+            Admin can use accept -->
+            <button (click)="verifyUser(user.publicId, true)">Accept</button>
+        </div>
+    </ng-template>
+    <button (click)="deleteUser(user.publicId)">Delete</button>
+    <h3>{{message}}</h3>
+</div>
+
+<a routerLink="/admin">Go TO Homepage</a>

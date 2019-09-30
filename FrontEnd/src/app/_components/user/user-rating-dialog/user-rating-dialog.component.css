@@ -1,0 +1,65 @@
+/* *{
+  margin: 0;
+  padding: 0;
+} */
+
+
+/* Modified from: https://github.com/mukulkant/Star-rating-using-pure-css */
+
+.dialog-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.dialog-content {
+  text-align: -webkit-center;
+}
+
+.dialog-content .rate {
+  /* float: left; */
+  /* height: 46px; */
+  padding: 0 10px;
+  width: 60%;
+  margin: 0 auto;
+}
+.dialog-content .rate:not(:checked) > input {
+  position:absolute;
+  top:-9999px;
+}
+.dialog-content .rate:not(:checked) > label {
+  float:right;
+  width:1em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:60px;
+  color:#ccc;
+}
+.dialog-content .rate:not(:checked) > label:before {
+  content: '★ ';
+}
+.dialog-content .rate > input:checked ~ label {
+  color: #ffc700;    
+}
+.dialog-content .rate:not(:checked) > label:hover,
+.dialog-content .rate:not(:checked) > label:hover ~ label {
+  color: #deb217;  
+}
+.dialog-content .rate > input:checked + label:hover,
+.dialog-content .rate > input:checked + label:hover ~ label,
+.dialog-content .rate > input:checked ~ label:hover,
+.dialog-content .rate > input:checked ~ label:hover ~ label,
+.dialog-content .rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
+
+.btn-rate, .btn-rate:hover {
+  background: none repeat scroll 0 0 #00a8b3;
+  color: #fff;
+  margin-left: 8px;
+}
+.btn-rate:hover {
+  background: none repeat scroll 0 0 #009da7;
+}

@@ -1,0 +1,46 @@
+<div class="inbox-head">
+    <h3>Outbox</h3>
+</div>
+<div *ngIf="loadedMessages; else load">
+    <div *ngIf="outboxMessages">
+        <div class="inbox-body">
+            <div class="message-preview col-md-12"> 
+                <div id="accordion">
+                    <div class="card" *ngFor="let message of outboxMessages; let i=index">
+                        <!--Message preview info-->
+                        <div class="card-header" id="headingOne" *ngIf="!message.deletedFrom">
+                            <table class="table table-inbox table-hover">
+                                <tbody>
+                                    <tr class="">
+                                        <td class="inbox-small-cells">
+                                            <button class=" expand btn btn-default" data-toggle="collapse" [attr.data-target]="'#collapse'+i" aria-expanded="true" aria-controls="collapseOne">v</button>
+                                        </td>
+                                        <td class="text-left sender">{{message.toUser.username}} ({{message.fromRole==='buyer'?'seller':'buyer'}})</td>
+                                        <td class="text-left message">{{message.message}}</td>
+                                        <td class="text-right date">{{message.dateTime.split('T')[0]}} {{message.dateTime.split('T')[1].substr(0,5)}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!--Collapsible for message-->
+                        <div id="collapse{{i}}" class="collapse" aria-labelledby="headingOne" data-parent="#accordion" *ngIf="!message.deletedFrom">
+                            <div class="card-body">
+                                <div class="message-comm-info col-md-12"><h4>To: </h4>{{message.toUser.username}} ({{message.fromRole==='buyer'?'seller':'buyer'}})</div>
+                                <div class="message-content col-md-12"><h4>Message: </h4>{{message.message}}</div>
+                                <div class="message-choices col-md-12">
+                                    <button class="btn btn-default delete" (click)="deleteMessage(message, i)">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!--accordion-->
+            </div>            
+        </div>
+    </div>
+</div>
+
+<alert></alert>
+
+<ng-template #load>
+    Loading Messages...
+</ng-template>

@@ -1,0 +1,6 @@
+<h2>Categories</h2>  
+<app-category-list (onCategoryPicked)="categoryPicked($event)"></app-category-list>
+<h2>Price</h2>
+<app-price-filter (onPricePicked)="pricePicked($event)"></app-price-filter>
+
+<button type="button" class="btn btn-success btn-block" (click)="filterSearch()" >Search</button>

@@ -1,0 +1,35 @@
+.inbox-body .modal .modal-body input, .inbox-body .modal .modal-body textarea {
+    /* border: 1px solid #e6e6e6; */
+    box-shadow: none;
+  }
+  /* .btn-send, .btn-send:hover {
+    background: none repeat scroll 0 0 #00a8b3;
+    color: #fff;
+  }
+  .btn-send:hover {
+    background: none repeat scroll 0 0 #009da7;
+  } */
+  .modal-header h4.modal-title {
+    font-family: "Open Sans",sans-serif;
+    font-weight: 300;
+  }
+  .modal-body label {
+    font-family: "Open Sans",sans-serif;
+    font-weight: 400;
+  }
+
+  .modal-body {
+    text-align: -webkit-center;
+  }
+
+  .btn-send, .btn-send:hover {
+    background: none repeat scroll 0 0 #00a8b3;
+    color: #fff;
+  }
+  .btn-send:hover {
+    background: none repeat scroll 0 0 #009da7;
+  }
+
+  .modal-body label {
+    font-weight: 900;
+  }

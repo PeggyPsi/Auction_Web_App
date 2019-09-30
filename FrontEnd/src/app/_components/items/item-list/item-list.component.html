@@ -1,0 +1,69 @@
+<h2>Recently added <b>active Auctions</b></h2>
+
+<div *ngIf="loadedItems; else load">
+    <div class="container" #itemsList *ngIf="items.length>0">
+        <div class="row">
+            <div class="col-md-4" *ngFor="let item of items; let i=index">
+                <div class="ibox" *ngIf="i<8">
+                    <div class="ibox-content product-box">
+                        <h3 *ngIf="item.active && !item.ended"><b> Auction ends on : {{item.auctionEnd.toString().substr(0,16).split('T')}} </b></h3>
+                        <div class="image-imitation">
+                            <ng-container *ngIf="item.ended; else checkSold">
+                                <div class="tag-ended">ENDED</div>
+                            </ng-container>
+                            <ng-template #checkSold>
+                                <div class="tag-sold" *ngIf="item.buyPrice != null">SOLD</div>
+                            </ng-template>
+                            <app-image-carousel [images]="item.images"></app-image-carousel>
+                        </div>
+                        <div class="product-desc">
+                            <span class="product-price">
+                                <div *ngIf="item.buyPrice === null && item.ended">Final Bid: {{item.currentBid}} $</div>
+                                <div *ngIf="item.buyPrice === null && !item.ended">Current Bid: {{item.currentBid}} $</div>
+                                <div *ngIf="item.buyPrice !== null">Bought price: {{item.buyPrice}} $</div>
+                            </span>
+
+                            <h6>Intitial price: <span>{{item.firstBid}} $</span></h6>
+                            <h6 *ngIf="item.buyOffer !== null" >Buy Price Offer: <span>{{item.buyOffer}} $</span></h6>
+
+                            <small class="text-muted"> Bids: {{item.noBids}}</small>
+                            <div (click)="onSelect(item.id)" class="product-name"> {{item.name}}</div>
+        
+                            <div class="small m-t-xs">
+                                <span>{{item.description}}</span>
+                            </div>
+                            <button (click)="onSelect(item.id)" class="btn btn-info">INFO</button>
+                            <!-- Specific item has been put into auction by logged in user  -->
+                            <ng-container *ngIf="currentUser ; then logged ; else user"></ng-container>
+                            <ng-template #logged>
+                                <ng-container *ngIf="item.seller.publicId === currentUser.publicId ; then seller ; else user"></ng-container>
+                            </ng-template>
+                            
+                            <ng-template #seller>
+                                <h3>Your Item</h3>
+                            </ng-template>
+                            <ng-template #user>
+                                <button [disabled]="item.ended" class="btn btn-info" (click)="bidItem(item.id)" *ngIf="item.buyPrice === null">BID</button>   
+                            </ng-template>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Display load more  -->
+            <div class="col-md-3">
+                <div class="ibox">
+                    <!-- <div class="ibox-content product-box"> -->
+                        <div class="load-more">
+                            <button class="btn btn-info" [routerLink]="['/browse', 'all']"> Browse More... </button> 
+                        </div>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<alert></alert>
+
+<ng-template #load>
+    Loading Item List...
+</ng-template>

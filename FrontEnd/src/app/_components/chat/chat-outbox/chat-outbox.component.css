@@ -1,0 +1,81 @@
+.inbox-body .modal .modal-body input, .inbox-body .modal .modal-body textarea {
+  border: 1px solid #e6e6e6;
+  box-shadow: none;
+}
+
+.table-inbox tr.unread td {
+  background: none repeat scroll 0 0 #f7f7f7;
+  font-weight: 600;
+}
+
+.inbox-head {
+  background: none repeat scroll 0 0 #41cac0;
+  border-radius: 0 4px 0 0;
+  color: #fff;
+  min-height: 80px;
+  padding: 20px;
+}
+.inbox-head h3 {
+  display: inline-block;
+  font-weight: 300;
+  margin: 0;
+  padding-top: 6px;
+}
+
+/* .expand {
+  height:20px;
+  text-align: center;
+  background: url("https://image.flaticon.com/icons/svg/60/60781.svg");
+} */
+
+.message-preview {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.card-header {
+  padding: 0;
+}
+
+.table {
+  margin-bottom: 0;
+}
+
+.table td {
+  padding: .75rem;
+  vertical-align: 0;
+}
+
+.table td.sender {
+  width: 20%;
+}
+
+.table td.message {
+  width: 20%;
+  max-width: 530px;
+
+  white-space: nowrap;
+
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+
+.btn.reply {
+  padding: 3px 100px;
+  margin-right: 5px;
+  background-color: rgb(75, 158, 75)
+}
+
+.btn.delete {
+  padding: 3px 100px;
+  margin-right: 5px;
+}
+
+.message-choices {
+  text-align: center;
+}
+
+.message-content {
+  margin-bottom: 2em;
+}
+
